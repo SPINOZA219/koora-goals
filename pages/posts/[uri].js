@@ -8,7 +8,7 @@ export default function SlugPage({ post }) {
   
 
 useEffect(()=>{
-  window.location.href = `https://edenultralounge.com/${post?.slug}`
+  window.location.href = `https://bestfeed.us/${post?.slug}`
 
 },[])
   return (
