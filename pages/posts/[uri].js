@@ -1,27 +1,27 @@
 import Head from 'next/head'
 import { client } from '../../lib/apollo';
 import { gql } from "@apollo/client";
-import { useEffect } from 'react';
-
 
 export default function SlugPage({ post }) {
-  
-
-useEffect(()=>{
-  window.location.href = `https://bestfeed.us/${post?.slug}`
-
-},[])
   return (
     <div>
       <Head>
         <title>{post?.title}</title>
         <meta property="og:title" content={post?.title} />
-        <meta property="og:description" content={post?.title} />
+        <meta property="og:description" content={post?.description} />
         <meta property="og:image" content={post?.featuredImage?.node?.sourceUrl} />
-        <meta property="og:url" content={`https://bestfeed.us.vercel.app/posts/${post?.slug}`} />
+        <meta property="og:url" content={`https://bestfeed.us/posts/${post?.slug}`} />
         <meta property="og:type" content="article" />
-        <link rel="icon" href="favicon.ico"></link>
+        <link rel="icon" href="/favicon.ico" />
       </Head>
+      
+      {/* Rest of your page content */}
+    </div>
+  )
+}
+
+// Your GraphQL query and data fetching methods remain unchanged
+
       
       
 
